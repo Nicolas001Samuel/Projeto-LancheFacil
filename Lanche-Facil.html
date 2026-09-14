@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Cabin", sans-serif;
+            background-color: #111D4A;
+            color: white;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #111D4A;
+        }
+
+
+        .topo {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 2px solid #F4E409;
+
+        }
+
+        .topo a {
+            position: absolute;
+            left: 20px;
+            
+        }
+
+        .topo a img {
+
+            width: 5rem;
+
+        }
+
+        nav {
+            background-color: #B1740F;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+        }
+
+
+        nav a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+
+        section {
+            margin-top: 2rem;
+            text-align: center;
+            scroll-margin-top: 120px;
+
+        }
+
+
+        #Hamburgueres h2 {
+            background-color: #B1740F;
+            border-radius: 15px;
+            padding: 0.6rem 0.6rem;
+            display: inline-block;
+        }
+
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+
+        }
+
+        .card {
+            width: 300px;
+            background-color: white;
+            color: #111D4A;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 0.5rem;
+            box-shadow: 0px 0px 5px black;
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card {
+            position: relative;
+
+        }
+
+        .sale {
+            position: absolute;
+            top: -23px;
+            left: -45px;
+            z-index: 10;
+        }
+
+        .card span {
+            display: inline-block;
+            margin-top: 0.3rem;
+            font-weight: bold;
+            color: #92140C;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 0.5rem;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        #cardapio h2 {
+            background-color: #B1740F;
+            border-radius: 15px;
+            padding: 0.6rem 0.6rem;
+            display: inline-block;
+        }
+
+        .card ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style-type: none;
+        }
+
+        #promocoes h2 {
+
+            background-color: #92140C;
+            border-radius: 15px;
+            padding: 0.6rem 0.6rem;
+            display: inline-block;
+
+        }
+
+        #contato h2 {
+            background-color: #B1740F;
+            border-radius: 15px;
+            padding: 0.6rem 0.6rem;
+            display: inline-block;
+        }
+
+        .conteiner-contato {
+
+            text-align: center;
+
+        }
+
+
+        .card-contato {
+            background-color: #92140C;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            text-align: left;
+            line-height: 2;
+        }
+
+        .card-contato a {
+            text-decoration: none;
+            color: #B1740F;
+        }
+
+
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+
+            z-index: 1000;
+        }
+
+        .whatsapp img {
+            width: 60px;
+        }
+
+        footer {
+            background-color: #111D4A;
+            text-align: center;
+            padding: 2rem;
+            border-top: 2px solid #F4E409;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Prático CSS</title>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="topo">
+            <a href="#inicio">
+                <img src="Projeto-Lanche_Facil/Images/ChatGPT Image 16 de jun. de 2026, 17_37_09 (1).png" alt="Hambúrguer azul">
+            </a>
+            <h1>Lanche Fácil</h1>
+
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#promocoes">Promoções</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+    </header>
+    <main>
+
+        <section id="inicio">
+            <div class="frase">
+                <h2>Bateu a fome? A gente resolve isso rapidinho!</h2>
+            </div>
+        </section>
+
+
+        <section id="Hamburgueres">
+            <h2>Nossos Hambúrgueres</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://cdn.vucasolution.com.br/upload/w_300/https://gryyplgyeyqb.compat.objectstorage.sa-saopaulo-1.oraclecloud.com/vuca-cdn/dfholding/arqs/produtos/czbei7m5n8di5zluqarh.png"
+                        alt="Hambúrguer azul">
+                    <h3>
+                        O mais mais
+                    </h3>
+
+                    <p>
+                        Pão artesanal, carne 180g e queijo mussarela.
+                    </p>
+                    <span>R$ 15,99</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o hambúrguer O Mais Mais."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn.thefork.com/tf-lab/image/upload/w_1080,c_fill,q_auto,f_auto/restaurant/9c6356b4-fce5-4f9d-b831-638033bc1194/e122db1d-55b7-4bfc-9170-de42389ee786.png"
+                        alt="Hambúrguer azul, com anéis de cebola">
+                    <h3>
+                        O suculento
+
+                    </h3>
+                    <p>
+                        Pão artesanal, carne 180g, queijo mussarela, anéis de cebola e molhos especiais da casa.
+
+                    </p>
+                    <span>R$ 29,90</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o hambúrguer O suculento."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/3f/53/b3/3f53b37d713c9405b099752a9555bd0c.jpg"
+                        alt="Hambúrguer vermelho">
+                    <h3>
+                        O quase explode
+
+                    </h3>
+                    <p>
+                        Pão artesanal, carne 180g, queijo cheddar, cebola crispy, molhos especiais da casa.
+
+                    </p>
+                    <span>R$ 29,90</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o hambúrguer O quase explode."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbkVyqVH4OI1wmAP_Y-FLQPbZ8UxHruEa-wmL8pFwe4qk2wRI0A_PcRU&s=10"
+                        alt="Hambueguer bem recheado">
+                    <h3>
+                        Segura na mão de Deus e vai!
+                    </h3>
+                    <p>
+                        Pão artesanal, 2 carne 180g, queijo cheddar, cebola crispy, molhos especiais da casa.
+                    </p>
+                    <span>R$ 34,90</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o hambúrguer Segura na mão de Deus e vai!."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cardapio">
+            <h2>Cardápio</h2>
+            <div class="cards">
+                <div class="card">
+
+                    <img src="https://images.aws.nestle.recipes/original/1821a30a8a8acec9f74a1372be582610_sem_t%C3%ADtulo_(18).jpg"
+                        alt="Pizza margherita">
+                    <h3>
+                        Margherete do céu!
+                    </h3>
+                    <p>
+                        Massa artesanal, molho de tomate pelado, mussarela de búfala, queijo parmesão ralado.
+                    </p>
+                    <span>R$ 60,00</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir a pizza Margherete do céu!"
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIDdwau8RdAl2JfSKVU63Vkga6ZCYQW2rqLivtcqlW523hO_nGW4nTbnQ&s=10"
+                        alt="Pizza de frango">
+                    <h3>
+                        Só Jesus na causa!
+                    </h3>
+                    <p>
+                        Massa artesanal, frango desfiado, queijo mussarela, requeijão, milho.
+                    </p>
+                    <span>R$ 55,00</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir a pizza Só Jesus na causa!"
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="https://www.tendaatacado.com.br/dicas/wp-content/uploads/2022/06/como-fazer-batata-frita-topo.jpg"
+                        alt="Porção de batata frita">
+                    <h3>
+                        Pedacin do céu!
+                    </h3>
+                    <p>
+                        Porção de batata frita
+                    </p>
+                    <span>P R$ 10,00 / M R$ 15,00 / G R$ 20,00</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir um pedacin do céu! tamnaho..."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn.vucasolution.com.br/upload/w_300/https://gryyplgyeyqb.compat.objectstorage.sa-saopaulo-1.oraclecloud.com/vuca-cdn/dfholding/arqs/produtos/czbei7m5n8di5zluqarh.png"
+                        alt="Hambúrguer azul">
+                    <h3>
+                        O mais mais
+                    </h3>
+
+                    <p>
+                        Pão artesanal, carne 180g e queijo mussarela.
+                    </p>
+                    <span>R$ 15,99</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o hambúrguer O mais mais."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://cdn.thefork.com/tf-lab/image/upload/w_1080,c_fill,q_auto,f_auto/restaurant/9c6356b4-fce5-4f9d-b831-638033bc1194/e122db1d-55b7-4bfc-9170-de42389ee786.png"
+                        alt="Hambúrguer azul, com anéis de cebola">
+                    <h3>
+                        O suculento
+
+                    </h3>
+                    <p>
+                        Pão artesanal, carne 180g, queijo mussarela, anéis de cebola e molhos especiais da casa.
+
+                    </p>
+                    <span>R$ 29,90</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o hambúrguer O suculento."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://i.pinimg.com/736x/3f/53/b3/3f53b37d713c9405b099752a9555bd0c.jpg"
+                        alt="Hambúrguer vermelho">
+                    <h3>
+                        O quase explode
+
+                    </h3>
+                    <p>
+                        Pão artesanal, carne 180g, queijo cheddar, cebola crispy, molhos especiais da casa.
+
+                    </p>
+                    <span>R$ 29,90</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o hambúrguer O quase explode."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbkVyqVH4OI1wmAP_Y-FLQPbZ8UxHruEa-wmL8pFwe4qk2wRI0A_PcRU&s=10"
+                        alt="Hambueguer bem recheado">
+                    <h3>
+                        Segura na mão de Deus e vai!
+                    </h3>
+                    <p>
+                        Pão artesanal, 2 carne 180g, queijo cheddar, cebola crispy, molhos especiais da casa.
+                    </p>
+                    <span>R$ 34,90</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o hambúrguer Segura na mão de Deus e vai!."
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://files.cercomp.ufg.br/weby/up/72/o/2.jpeg" alt="Bebidas">
+                    <h3>
+                        Bebidas
+                    </h3>
+
+                    <ul>
+                        <li>Refrigerante 2L</li>
+                        <li>Refrigerante 600ml</li>
+                        <li>Refri lata 350ml</li>
+                        <li>Sucos jarra & copo</li>
+                    </ul>
+
+                    <span>R$ 13,00 / R$ 8,00 / R$ 6,00 / R$ 17,00 & R$ 9,00</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir uma bebida..." target="_blank"
+                        class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="promocoes">
+            <h2>Promoções</h2>
+            <div class="cards">
+                <div class="card">
+                    <img class="sale"
+                        src="https://static.vecteezy.com/system/resources/previews/027/765/037/non_2x/red-sale-label-on-a-transparent-background-free-png.png"
+                        alt="Oferta">
+
+                    <img src="Projeto-Lanche_Facil/Images/ChatGPT Image 17 de jun. de 2026, 15_30_17.png" alt="Hambúrguer azul com trio">
+                    <h3>
+                        Trio O mais mais
+                    </h3>
+                    <p>
+                        Pão artesanal, carne 180g e queijo mussarela e um Pedacin do céu tam. P e um refri lata.
+                    </p>
+                    <span>R$ 25,00</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir o trio O mais mais!" target="_blank"
+                        class="botao">
+                        Pedir Agora
+                    </a>
+
+
+                </div>
+                <div class="card">
+
+                    <img class="sale"
+                        src="https://static.vecteezy.com/system/resources/previews/027/765/037/non_2x/red-sale-label-on-a-transparent-background-free-png.png"
+                        alt="Oferta">
+
+
+                    <img src="Projeto-Lanche_Facil/Images/ChatGPT Image 17 de jun. de 2026, 15_41_31.png" alt="Trio de hambúrguer">
+                    <h3>
+                        Trio Segura na mão de Deus e vai!
+                    </h3>
+                    <p>
+                        Pão artesanal, 2 carne 180g, queijo cheddar, cebola crispy, molhos especiais da casa e um
+                        Pedacin do
+                        céu
+                        tam. P e um refri lata.
+                    </p>
+                    <span>R$ 40,00</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir um trio Segura na mão de Deus e vai!"
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+                <div class="card">
+
+                    <img class="sale"
+                        src="https://static.vecteezy.com/system/resources/previews/027/765/037/non_2x/red-sale-label-on-a-transparent-background-free-png.png"
+                        alt="Oferta">
+
+
+                    <img src="Projeto-Lanche_Facil/Images/ChatGPT Image 17 de jun. de 2026, 16_04_27.png" alt="Duas pizzas e um refrigerante">
+                    <h3>
+                        2 pizzas e 1 refrigerante 2L
+                    </h3>
+                    <p>
+                        Massa artesanal, molho de tomate pelado, mussarela de búfala, queijo parmesão ralado.
+                        <br>
+                        Massa
+                        artesanal, frango desfiado, queijo mussarela, requeijão, milho. Refrigerante 2L.
+                    </p>
+                    <span>R$ 85,00</span>
+
+                    <a href="https://wa.me/5561999999999?text=Olá! Quero pedir Duas pizzas e 1 refrigerante 2L"
+                        target="_blank" class="botao">
+                        Pedir Agora
+                    </a>
+                </div>
+
+
+
+
+            </div>
+
+        </section>
+
+
+        <section id="contato">
+            <h2>
+                Contato
+            </h2>
+
+            <div class="container-contato">
+
+                <div class="card-contato">
+
+                    <p>📞 Telefone: (61) 99999-9999</p>
+
+                    <a href="https://wa.me/5561999999999">
+                        Fale conosco pelo WhatsApp
+                    </a>
+
+                    <p>📍 Endereço:<br>
+                        Avenida dos Hambúrgueres, nº 450<br>
+                        Setor Saboroso<br>
+                        Brasília - DF<br>
+                        CEP: 70250-450
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <a href="https://wa.me/5561999999999" class="whatsapp" target="_blank">
+            <img src="Projeto-Lanche_Facil/Images/whatsapp-vector-logo-icon-logotipo-vector-midia-social_901408-404-Photoroom.png" alt="WhatsApp">
+        </a>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Lanche Fácil</p>
+        <p>WhatsApp: (61) 99999-9999</p>
+
+    </footer>
+
+</body>
+
+</html>
